@@ -27,6 +27,8 @@ Final-Project-University/
 ## Results
  
 All experiments used ShanghaiTech Part A with a batch size of 1, learning rate of 1e-6, and SGD optimiser (momentum=0.9). Results are compared against the unpretrained MCNN baseline reported by Zhang et al.
+
+ - It should also be noted that random weight initialisation introduces variability between training runs, meaning small differences in MAE may not be entirely attributable to the CBAM modification itself.
  
 | Model | Test MAE | Notes |
 |---|---|---|
