@@ -3,7 +3,6 @@
 My final project for my BSc at the University of Leicester.
  
 A crowd-counting project using the MCNN model adapted with the CBAM attention mechanism, trained and evaluated on the ShanghaiTech dataset (https://www.kaggle.com/datasets/tthien/shanghaitech).
-Of which was featured in the paper below.
  
 > Based on *Single-Image Crowd Counting via Multi-Column Convolutional Neural Network* — Zhang et al., CVPR 2016 ([IEEE](https://ieeexplore.ieee.org/document/7780439))
  
@@ -39,11 +38,11 @@ All experiments used ShanghaiTech Part A with a batch size of 1, learning rate o
 - CBAM integration allowed the model to train longer before overfitting, contributing to the improved MAE.
 - Both models showed large MAE spikes on individual test samples, reflecting the difficulty of high-density scenes in Part A.
 - CBAM training showed more erratic behaviour due to the added complexity of the attention mechanism.
-- While significant results were not achieved experimentation with the placement of attention mechanisms and the quantity of them may yield to gretaer results.
+- While significant results were not achieved, experimentation with the placement of attention mechanisms and the quantity of them may yield gretaer results.
 - Due to the added compute of adding attention mechanisms I could only place CBAM after each column.
 ---
 
-# Setup Guide
+## Setup Guide
 
 ## Prerequisites
 - Python 3.10 or higher
@@ -51,7 +50,7 @@ All experiments used ShanghaiTech Part A with a batch size of 1, learning rate o
 
 ---
 
-## 1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Hazza-02/Final-Project-University.git
@@ -60,7 +59,7 @@ cd Final-Project-University
 
 ---
 
-## 2. Create and activate a virtual environment
+### 2. Create and activate a virtual environment
 
 **Windows:**
 ```bash
@@ -76,7 +75,7 @@ source venv/bin/activate
 
 ---
 
-## 3. Install dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -88,7 +87,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Download the ShanghaiTech Dataset
+### 4. Download the ShanghaiTech Dataset
 
 1. Download from (https://www.kaggle.com/datasets/tthien/shanghaitech)
 2. Extract and place it so the structure looks like this:
@@ -109,7 +108,7 @@ Final-Project-University/
 
 ---
 
-## 5. Preprocess — Generate Density Maps
+### 5. Preprocess — Generate Density Maps
 
 Before training, you must generate density maps from the ground truth `.mat` files:
 
@@ -117,11 +116,11 @@ Before training, you must generate density maps from the ground truth `.mat` fil
 python preprocess.py
 ```
 
-> Edit the paths in `preprocess.py` to point to your local ShanghaiTech directory if needed.
+> Edit the paths in `preprocess.py`, `train.py`, and `test.py` to point to your local ShanghaiTech directory if needed.
 
 ---
 
-## 6. Train the model
+### 6. Train the model
 
 ```bash
 python train.py
@@ -142,7 +141,7 @@ Key hyperparameters (editable in `train.py`):
 
 ---
 
-## 7. Evaluate the model
+### 7. Evaluate the model
 
 ```bash
 python test.py
