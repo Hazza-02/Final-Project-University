@@ -31,13 +31,15 @@ All experiments used ShanghaiTech Part A with a batch size of 1, learning rate o
 |---|---|---|
 | MCNN (Zhang et al., unpretrained) | ~120 | From original paper |
 | MCNN (this implementation) | ~129 | Reproduced baseline |
-| MCNN + CBAM (ours) | 117 | CBAM applied after each column |
+| MCNN + CBAM (this implementation) | 117 | CBAM applied after each column |
  
 **Key observations:**
 - The baseline model trained steadily but began overfitting around epoch 300, with train loss decreasing while test loss diverged.
 - CBAM integration allowed the model to train longer before overfitting, contributing to the improved MAE.
 - Both models showed large MAE spikes on individual test samples, reflecting the difficulty of high-density scenes in Part A.
 - CBAM training showed more erratic behaviour due to the added complexity of the attention mechanism.
+- While significant results were not achieved experimentation with the placement of attention mechanisms and the quantity of them may yield to gretaer results.
+- Due to the added compute of adding attention mechanisms I could only place CBAM after each column.
 ---
 
 # Setup Guide
