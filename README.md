@@ -5,7 +5,8 @@ My final project for my BSc at the University of Leicester.
 A crowd-counting project using the MCNN model adapted with the CBAM attention mechanism, trained and evaluated on the ShanghaiTech dataset (https://www.kaggle.com/datasets/tthien/shanghaitech).
  
 > Based on *Single-Image Crowd Counting via Multi-Column Convolutional Neural Network* — Zhang et al., CVPR 2016 ([IEEE](https://ieeexplore.ieee.org/document/7780439))
- 
+
+> CBAM mechanism from *CBAM: Convolutional Block Attention Module* — Woo et al., ECCV 2018 ([paper](https://arxiv.org/abs/1807.06521)
 ---
  
 ## Project Structure
@@ -44,7 +45,7 @@ All experiments used ShanghaiTech Part A with a batch size of 1, learning rate o
 
 ## Setup Guide
 
-## Prerequisites
+### Prerequisites
 - Python 3.10 or higher
 - Git
 
