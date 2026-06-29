@@ -39,7 +39,7 @@ All experiments used ShanghaiTech Part A with a batch size of 1, learning rate o
 - CBAM integration allowed the model to train longer before overfitting, contributing to the improved MAE.
 - Both models showed large MAE spikes on individual test samples, reflecting the difficulty of high-density scenes in Part A.
 - CBAM training showed more erratic behaviour due to the added complexity of the attention mechanism.
-- While significant results were not achieved, experimentation with the placement of attention mechanisms and the quantity of them may yield gretaer results.
+- While significant results were not achieved, experimentation with the placement of attention mechanisms and the quantity of them may yield greater results.
 - Due to the added compute of adding attention mechanisms I could only place CBAM after each column.
 ---
 
