@@ -1,6 +1,44 @@
 # Final-Project-University
-My final project for my BSc at the University Of Leicester.
-A Crowd-Counting project using the MCNN model (https://ieeexplore.ieee.org/document/7780439) adapted with the CBAM attention mechanism Using the ShanghaiTech dataset 
+ 
+My final project for my BSc at the University of Leicester.
+ 
+A crowd-counting project using the MCNN model adapted with the CBAM attention mechanism, trained and evaluated on the ShanghaiTech dataset.
+ 
+> Based on *Single-Image Crowd Counting via Multi-Column Convolutional Neural Network* — Zhang et al., CVPR 2016 ([IEEE](https://ieeexplore.ieee.org/document/7780439))
+ 
+---
+ 
+## Project Structure
+ 
+```
+Final-Project-University/
+├── mcnn.py           # Baseline MCNN model
+├── mcnnCBAM.py       # MCNN model with CBAM attention mechanism
+├── dataset.py        # PyTorch dataset class for ShanghaiTech
+├── preprocess.py     # Density map generation from ground truth .mat files
+├── train.py          # Training loop
+├── test.py           # Evaluation script
+└── requirements.txt  # Python dependencies
+```
+ 
+---
+ 
+## Results
+ 
+All experiments used ShanghaiTech Part A with a batch size of 1, learning rate of 1e-6, and SGD optimiser (momentum=0.9). Results are compared against the unpretrained MCNN baseline reported by Zhang et al.
+ 
+| Model | Test MAE | Notes |
+|---|---|---|
+| MCNN (Zhang et al., unpretrained) | ~120 | From original paper |
+| MCNN (this implementation) | ~129 | Reproduced baseline |
+| MCNN + CBAM (ours) | 117 | CBAM applied after each column |
+ 
+**Key observations:**
+- The baseline model trained steadily but began overfitting around epoch 300, with train loss decreasing while test loss diverged.
+- CBAM integration allowed the model to train longer before overfitting, contributing to the improved MAE.
+- Both models showed large MAE spikes on individual test samples, reflecting the difficulty of high-density scenes in Part A.
+- CBAM training showed more erratic behaviour due to the added complexity of the attention mechanism.
+---
 
 # Setup Guide
 
