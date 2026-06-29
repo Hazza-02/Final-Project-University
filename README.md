@@ -50,7 +50,7 @@ pip install -r requirements.txt
 ## 4. Download the ShanghaiTech Dataset
 
 1. Download from (https://www.kaggle.com/datasets/tthien/shanghaitech)
-3. Extract and place it so the structure looks like this:
+2. Extract and place it so the structure looks like this:
 
 ```
 Final-Project-University/
