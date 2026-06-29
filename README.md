@@ -6,7 +6,7 @@ A crowd-counting project using the MCNN model adapted with the CBAM attention me
  
 > Based on *Single-Image Crowd Counting via Multi-Column Convolutional Neural Network* — Zhang et al., CVPR 2016 ([IEEE](https://ieeexplore.ieee.org/document/7780439))
 
-> CBAM mechanism from *CBAM: Convolutional Block Attention Module* — Woo et al., ECCV 2018 ([paper](https://arxiv.org/abs/1807.06521)
+> CBAM mechanism from *CBAM: Convolutional Block Attention Module* — Woo et al., ECCV 2018 ([paper](https://arxiv.org/abs/1807.06521))
 ---
  
 ## Project Structure
