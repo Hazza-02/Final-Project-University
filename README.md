@@ -34,8 +34,8 @@ It should also be noted that random weight initialisation introduces variability
 |---|---|---|
 | MCNN (Zhang et al., with column pre-training) | ~110 | From original paper |
 | MCNN (Zhang et al., without column pre-training) | ~120 | From original paper |
-| MCNN (this implementation) | ~129 | Reproduced baseline |
-| MCNN + CBAM (this implementation) | 117 | CBAM applied after each column |
+| MCNN (this implementation without column pre-training) | ~129 | Reproduced baseline |
+| MCNN + CBAM (this implementation without column pre-training) | 117 | CBAM applied after each column |
  
 **Key observations:**
 - The baseline model trained steadily but began overfitting around epoch 300, with train loss decreasing while test loss diverged.
